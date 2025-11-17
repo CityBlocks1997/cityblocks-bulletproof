@@ -1,0 +1,83 @@
+{
+  "name": "ColorScheme",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the color scheme"
+    },
+    "base_color": {
+      "type": "string",
+      "description": "Base hex color"
+    },
+    "color_name": {
+      "type": "string",
+      "description": "Name of the base color preset"
+    },
+    "hue": {
+      "type": "number",
+      "description": "Hue rotation value (0-360)"
+    },
+    "saturation": {
+      "type": "number",
+      "description": "Saturation percentage (0-200)"
+    },
+    "opacity": {
+      "type": "number",
+      "description": "Opacity percentage (0-100)"
+    },
+    "blend_mode": {
+      "type": "string",
+      "description": "CSS blend mode",
+      "enum": [
+        "multiply",
+        "overlay",
+        "color",
+        "hard-light",
+        "soft-light",
+        "screen"
+      ]
+    },
+    "pattern_url": {
+      "type": "string",
+      "description": "URL of the pattern or image overlay"
+    },
+    "pattern_opacity": {
+      "type": "number",
+      "description": "Pattern opacity percentage (0-100)",
+      "default": 50
+    },
+    "pattern_blend_mode": {
+      "type": "string",
+      "description": "Pattern blend mode",
+      "enum": [
+        "multiply",
+        "overlay",
+        "soft-light",
+        "hard-light",
+        "screen",
+        "darken",
+        "lighten"
+      ],
+      "default": "multiply"
+    },
+    "is_public": {
+      "type": "boolean",
+      "description": "Whether the scheme is publicly visible",
+      "default": true
+    },
+    "is_homepage": {
+      "type": "boolean",
+      "description": "Whether this is set as the user's homepage",
+      "default": false
+    }
+  },
+  "required": [
+    "name",
+    "base_color",
+    "hue",
+    "saturation",
+    "opacity",
+    "blend_mode"
+  ]
+}

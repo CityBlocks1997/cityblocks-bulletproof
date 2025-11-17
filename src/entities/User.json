@@ -1,0 +1,14 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "homepage_scheme_id": {
+      "type": "string",
+      "description": "ID of the color scheme to use as homepage"
+    },
+    "bio": {
+      "type": "string",
+      "description": "User bio for their homepage"
+    }
+  }
+}
